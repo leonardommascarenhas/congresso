@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -17,6 +17,15 @@ type Speaker = {
 
 const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
   const [showFullBio, setShowFullBio] = useState(false);
+  const [isClamped, setIsClamped] = useState(false);
+  const bioRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    if (bioRef.current) {
+      const isTextClamped = bioRef.current.scrollHeight > bioRef.current.clientHeight;
+      setIsClamped(isTextClamped);
+    }
+  }, [speaker.bio]);
 
   return (
     <Card className="group border-0 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden bg-gradient-to-br from-white to-gray-50">
@@ -52,26 +61,29 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
                 {speaker.credenciais}
               </p>
               <p
+                ref={bioRef}
                 className={`text-gray-600 leading-relaxed text-sm lg:text-base mb-6 ${
-                  showFullBio ? "" : "line-clamp-[8]"
+                  showFullBio ? "" : "line-clamp-[8] max-h-[12rem] overflow-hidden"
                 }`}>
                 {speaker.bio}
               </p>
             </div>
 
-            <button
-              type="button"
-              onClick={() => setShowFullBio((prev) => !prev)}
-              className="flex items-center text-blue-600 font-medium group-hover:text-blue-700 transition-colors">
-              <span className="text-sm lg:text-base">
-                {showFullBio ? "Ver menos" : "Ver perfil completo"}
-              </span>
-              {showFullBio ? (
-                <ArrowUpRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5 group-hover:translate-x-1 transition-transform" />
-              ) : (
-                <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5 group-hover:translate-x-1 transition-transform" />
-              )}
-            </button>
+            {(isClamped || showFullBio) && (
+              <button
+                type="button"
+                onClick={() => setShowFullBio((prev) => !prev)}
+                className="flex items-center text-blue-600 font-medium group-hover:text-blue-700 transition-colors">
+                <span className="text-sm lg:text-base">
+                  {showFullBio ? "Ver menos" : "Ver perfil completo"}
+                </span>
+                {showFullBio ? (
+                  <ArrowUpRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5 group-hover:translate-x-1 transition-transform" />
+                ) : (
+                  <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5 group-hover:translate-x-1 transition-transform" />
+                )}
+              </button>
+            )}
           </div>
         </div>
       </CardContent>

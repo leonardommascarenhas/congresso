@@ -17,6 +17,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import SpeakerCard from "@/components/SpeakerCard";
+import ScheduleButton from "@/components/ScheduleButton";
 
 type Speaker = {
   id: number;
@@ -373,20 +374,14 @@ export default function CongressoOdontologia() {
               <p className="text-gray-600 mb-6 text-lg">
                 E mais especialistas confirmados em breve
               </p>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white bg-transparent px-8 py-3">
-                Ver programação completa
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <ScheduleButton />
             </div>
           </div>
         </div>
       </section>
 
       {/* Schedule Section */}
-      <section className="py-24 lg:py-32 bg-gray-50">
+      <section id="schedule" className="py-24 lg:py-32 bg-gray-50">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 animate-fade-in">
