@@ -1,1 +1,72 @@
-node_modules
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Runtime
+dist/
+build/
+.next/
+out/
+coverage/
+.temp/
+tmp/
+.cache/
+.vite/
+.husky/_/
+
+# dotenv
+.env
+.env.*.local
+.env.local
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.sw?
+*.swo
+*.swn
+
+# OS metadata
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Testing
+jest-html-reporters-*.html
+coverage/
+
+# Docker
+docker-compose.override.yml
+*.local.yml
+
+# Misc
+*.tgz
+*.gz
+*.zip
+*.bak
+*.orig
+*.patch
+*.rej
+*.sublime-workspace
+
+# Optional: Mac-specific system file
+.AppleDouble
+.LSOverride
