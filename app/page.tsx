@@ -18,6 +18,7 @@ import Image from "next/image";
 import Link from "next/link";
 import SpeakerCard from "@/components/SpeakerCard";
 import ScheduleButton from "@/components/ScheduleButton";
+import SimpleStatsSection from "@/components/Stats";
 
 type Speaker = {
   id: number;
@@ -187,10 +188,9 @@ const SCHEDULE_DATA: Record<"morning" | "afternoon", ScheduleItem[]> = {
 };
 
 const STATS_DATA: Stat[] = [
-  { value: "500+", label: "Participantes" },
-  { value: "12", label: "Palestrantes" },
+  { value: "300+", label: "Participantes" },
+  { value: "6", label: "Palestrantes" },
   { value: "8h", label: "De conteúdo" },
-  { value: "100%", label: "Digital" },
 ];
 
 const SOCIAL_LINKS: SocialLinkType[] = [
@@ -340,15 +340,7 @@ export default function CongressoOdontologia() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {STATS_DATA.map((stat, index) => (
-              <StatCard key={index} value={stat.value} label={stat.label} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <SimpleStatsSection />
 
       {/* Speakers Section */}
       <section className="py-24 lg:py-32 bg-white">
