@@ -19,6 +19,7 @@ import Link from "next/link";
 import SpeakerCard from "@/components/SpeakerCard";
 import ScheduleButton from "@/components/ScheduleButton";
 import SimpleStatsSection from "@/components/Stats";
+import EventSection from "./Header";
 
 type Speaker = {
   id: number;
@@ -302,9 +303,8 @@ export default function CongressoOdontologia() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section
-        className="relative text-white bg-gradient-to-br from-cyan-400 via-blue-500 to-blue-600
- min-h-screen flex items-center lg:bg-[url('/BANNER.jpg')] lg:bg-cover lg:bg-[position:50%_40%]">
-        {/* Softer and more balanced gradient for better visibility without darkening too much */}
+        className="relative text-white hidden lg:flex
+ min-h-screen  items-center lg:bg-[url('/BANNER.jpg')] bg-cover bg-right lg:bg-[position:50%_40%]">
         <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-transparent"></div>
 
         <div className="container mx-auto px-4 py-8 relative z-10">
@@ -346,7 +346,7 @@ export default function CongressoOdontologia() {
           </div>
         </div>
       </section>
-
+      <EventSection />
       {/* Stats Section */}
       <SimpleStatsSection />
 

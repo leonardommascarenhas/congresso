@@ -52,7 +52,7 @@ export default function SimpleStatsSection() {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-3 gap-8 max-w-4xl mx-auto text-center">
           {STATS_DATA.map((stat, index) => (
