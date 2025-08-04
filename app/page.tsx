@@ -301,30 +301,37 @@ export default function CongressoOdontologia() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-cyan-400 via-blue-500 to-blue-600 text-white min-h-screen flex items-center">
-        <div className="container mx-auto px-4 py-8">
+      <section
+        className="relative text-white bg-gradient-to-br from-cyan-400 via-blue-500 to-blue-600
+ min-h-screen flex items-center lg:bg-[url('/BANNER.jpg')] lg:bg-cover lg:bg-[position:50%_40%]">
+        {/* Softer and more balanced gradient for better visibility without darkening too much */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-transparent"></div>
+
+        <div className="container mx-auto px-4 py-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-white/20 text-white border-white/30 text-sm px-4 py-2">
+            <Badge className="mb-6 bg-white/20 text-white border-white/30 text-sm px-4 py-2 shadow-sm backdrop-blur-sm">
               6 de setembro • Salvador
             </Badge>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]">
               Congresso de
               <br />
-              <span className="text-cyan-200">Odontologia Digital</span>
+              <span className="text-cyan-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]">
+                Odontologia Digital
+              </span>
             </h1>
 
-            <p className="text-lg sm:text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]">
               O futuro da odontologia acontece aqui. Tecnologia, inovação e networking em
               um só lugar.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 text-base">
-              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm">
                 <MapPin className="h-4 w-4" />
                 <span>Mundo Plaza, Salvador</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm">
                 <Clock className="h-4 w-4" />
                 <span>8h às 18h</span>
               </div>
