@@ -13,23 +13,23 @@ const sectionContent = {
 
 export default function EventSection() {
   return (
-    <div className="w-full lg:hidden bg-white overflow-x-hidden relative">
+    <div className="w-full lg:hidden bg-white overflow-x-hidden relative min-h-screen flex flex-col">
       {/* Banner image */}
       <div className="relative">
         <Image
           src="/mobilebanner.jpg"
           alt="Event Banner"
           width={1000}
-          height={700}
+          height={300}
           className="w-full h-auto"
         />
         {/* Softer gradient overlay */}
-        <div className="absolute bottom-0 left-0 w-full h-4 bg-gradient-to-b from-transparent to-cyan-200 pointer-events-none" />
+        <div className="absolute -bottom-2 left-0 w-full h-4 bg-gradient-to-b from-transparent to-cyan-400 pointer-events-none" />
       </div>
 
-      {/* Content section */}
-      <div className="bg-gradient-to-br from-cyan-400 via-blue-500 to-blue-600 text-white py-16">
-        <div className="max-w-2xl mx-auto text-center px-4">
+      {/* Content section fills the rest of the screen and is centered */}
+      <div className="flex-1 flex flex-col justify-center items-center bg-gradient-to-b from-cyan-400 via-blue-500 to-blue-600 text-white">
+        <div className="-mt-12 max-w-2xl text-center px-4">
           <div className="bg-white/20 text-white border border-white/30 text-sm px-4 py-2 rounded-full mb-6 inline-block">
             {sectionContent.dateLocationBadge}
           </div>
