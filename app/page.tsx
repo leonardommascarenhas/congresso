@@ -96,15 +96,15 @@ const SPEAKERS_DATA: Speaker[] = [
     credenciais: "Mestre em Prótese • Estética Digital",
     alias: "LB",
   },
-  {
-    id: 5,
-    nome: "Dr. Leonardo Barreto",
-    especialidade: "Tecnologias em Implantodontia",
-    bio: "Especialista, mestre e doutor em Implantodontia. Pesquisador em novas tecnologias aplicadas à implantodontia. Professor universitário.",
-    imagem: "/placeholder.svg?height=200&width=200&text=Dr.+Lucas+Cunha",
-    credenciais: "Mestre • Doutor • Professor",
-    alias: "LC",
-  },
+  // {
+  //   id: 5,
+  //   nome: "Dr. Leonardo Barreto",
+  //   especialidade: "Tecnologias em Implantodontia",
+  //   bio: "Especialista, mestre e doutor em Implantodontia. Pesquisador em novas tecnologias aplicadas à implantodontia. Professor universitário.",
+  //   imagem: "/placeholder.svg?height=200&width=200&text=Dr.+Lucas+Cunha",
+  //   credenciais: "Mestre • Doutor • Professor",
+  //   alias: "LC",
+  // },
   {
     id: 6,
     nome: "Dra. Ana Julia Melo",
@@ -178,7 +178,6 @@ const SCHEDULE_DATA: Record<"morning" | "afternoon", ScheduleItem[]> = {
       title: "Tecnologias em Implantodontia",
       time: "17:00 - 18:00",
       description: "Inovações e tendências futuras em implantodontia",
-      speakers: [5],
     },
     {
       type: "closing",
@@ -309,11 +308,11 @@ export default function CongressoOdontologia() {
 
         <div className="container mx-auto px-4 py-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-white/20 text-white border-white/30 text-sm px-4 py-2 shadow-sm backdrop-blur-sm">
+            <Badge className="mb-4 bg-white/20 text-white border-white/30 text-xs sm:text-sm px-3 py-1.5 shadow-sm backdrop-blur-sm">
               6 de setembro • Salvador
             </Badge>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]">
+            <h1 className="text-3xl  md:text-5xl lg:text-5xl 2xl:text-6xl font-bold mb-4 2xl:mb-6 leading-snug 2xl:leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]">
               Congresso de
               <br />
               <span className="text-cyan-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]">
@@ -321,17 +320,18 @@ export default function CongressoOdontologia() {
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]">
-              O futuro da odontologia acontece aqui. Tecnologia, inovação e networking em
-              um só lugar.
+            <p className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl mb-6 2xl:mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]">
+              O futuro da odontologia acontece aqui.
+              <br />
+              Tecnologia, inovação e networking em um só lugar.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 text-base">
-              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 2xl:gap-4 mb-6 2xl:mb-8 text-sm sm:text-base">
+              <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full backdrop-blur-sm">
                 <MapPin className="h-4 w-4" />
                 <span>Mundo Plaza, Salvador</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm">
+              <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full backdrop-blur-sm">
                 <Clock className="h-4 w-4" />
                 <span>8h às 18h</span>
               </div>
@@ -339,7 +339,7 @@ export default function CongressoOdontologia() {
 
             <Button
               size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4 h-auto font-semibold shadow-xl">
+              className="bg-white text-blue-600 hover:bg-gray-100 text-sm sm:text-base xl:text-lg 2xl:text-xl px-6 sm:px-8 py-3 sm:py-4 h-auto font-semibold shadow-xl">
               Garanta sua vaga
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
