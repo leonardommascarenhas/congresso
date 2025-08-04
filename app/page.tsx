@@ -59,6 +59,15 @@ type FooterLink = {
 // Data constants
 const SPEAKERS_DATA: Speaker[] = [
   {
+    id: 3,
+    nome: "Dr. Fábio Barbosa",
+    especialidade: "Cirurgias Avançadas e Estética Periodontal",
+    bio: "Mestre em Implantes Dentários pela São Leopoldo Mandic. Pós-graduado em Cirurgias Avançadas pelo M.A.R.C Miami. CEO do Instituto Odontomédico e proprietário da Zircolab.",
+    imagem: "/Doutores/Fabio.webp",
+    credenciais: "UFBA • São Leopoldo Mandic • M.A.R.C Miami",
+    alias: "FB",
+  },
+  {
     id: 1,
     nome: "Prof. Tiago Cadidé",
     especialidade: "Implantodontia e Harmonização Facial",
@@ -76,27 +85,19 @@ const SPEAKERS_DATA: Speaker[] = [
     credenciais: "CTA Academy • Instituto Prime",
     alias: "DB",
   },
-  {
-    id: 3,
-    nome: "Dr. Fábio Barbosa",
-    especialidade: "Cirurgias Avançadas e Estética Periodontal",
-    bio: "Mestre em Implantes Dentários pela São Leopoldo Mandic. Pós-graduado em Cirurgias Avançadas pelo M.A.R.C Miami. CEO do Instituto Odontomédico e proprietário da Zircolab.",
-    imagem: "/Doutores/Fabio.webp",
-    credenciais: "UFBA • São Leopoldo Mandic • M.A.R.C Miami",
-    alias: "FB",
-  },
+
   {
     id: 4,
-    nome: "Dr. Leonardo Barreto",
+    nome: "Dr. Lucas Cunha",
     especialidade: "Prótese Dentária e Laminados Cerâmicos",
     bio: "Graduado em Odontologia pela UNESP – São José dos Campos (SP).\nAtualização em Implantodontia pela USP – São Paulo.\nEspecialista em Implantodontia pela UNESP – São José dos Campos.\nMestre em Periodontia pela São Leopoldo Mandic – Campinas (SP).",
-    imagem: "/Doutores/LeonardoBarreto.jpeg",
+    imagem: "/Doutores/LucasCunha.jpeg",
     credenciais: "Mestre em Prótese • Estética Digital",
     alias: "LB",
   },
   {
     id: 5,
-    nome: "Dr. Lucas Cunha",
+    nome: "Dr. Leonardo Barreto",
     especialidade: "Tecnologias em Implantodontia",
     bio: "Especialista, mestre e doutor em Implantodontia. Pesquisador em novas tecnologias aplicadas à implantodontia. Professor universitário.",
     imagem: "/placeholder.svg?height=200&width=200&text=Dr.+Lucas+Cunha",
@@ -108,7 +109,7 @@ const SPEAKERS_DATA: Speaker[] = [
     nome: "Dra. Ana Julia Melo",
     especialidade: "Tecnologias em Implantodontia e Prótese Dentária",
     bio: "Especialista, mestre e doutora em Implantodontia. Pesquisadora em novas tecnologias aplicadas à implantodontia. Professora universitária.\nGraduada em Odontologia pela Universidade Estadual do Norte do Paraná (UENP).\nEspecialista em Prótese Dentária pelo Instituto Ária – Brasília.\nEspecializada em Implantodontia pela Innovare – Salvador.\nAtualização em Lentes de Contato Dentais com Dr. Eduardo Rocha.",
-    imagem: "/Doutores/AnaJuliaMelo.JPG",
+    imagem: "/Doutores/AnaJuliaMeloCropped.JPG",
     credenciais: "Mestre • Doutora • Professora",
     alias: "AJ",
   },
