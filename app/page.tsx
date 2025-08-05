@@ -72,7 +72,7 @@ const SPEAKERS_DATA: Speaker[] = [
     id: 1,
     nome: "Prof. Tiago Cadidé",
     especialidade: "Implantodontia e Harmonização Facial",
-    bio: "Mestre e doutorando em Implantodontia. Possui 18 anos coordenando cursos de especialização na área. Atualmente, é coordenador dos cursos de Especialização em Implantodontia do CTA em Salvador, Feira de Santana e Aracaju.",
+    bio: "Especialista em Implantodontia, Prótese Dentária e Harmonização Facial, Mestre e Doutorando em Implantodontia. Coordenador dos cursos de Especialização do Instituto Harmonic nas unidades de Aracaju, Salvador e Feira de Santana.",
     imagem: "/Doutores/DrTiagoCadidé.jpg",
     credenciais: "Mestre • Doutorando • 18 anos de experiência",
     alias: "TC",
@@ -129,7 +129,7 @@ const SCHEDULE_DATA: Record<"morning" | "afternoon", ScheduleItem[]> = {
       title: "Cirurgia Guiada",
       time: "08:30 - 09:20",
       description: "Técnicas avançadas em cirurgia guiada por computador",
-      speakers: [1],
+      speakers: [1, 4],
     },
     {
       type: "presentation",
@@ -505,11 +505,6 @@ export default function CongressoOdontologia() {
                 O maior evento de odontologia digital do Nordeste, conectando
                 profissionais e promovendo a inovação na área da saúde bucal.
               </p>
-              <div className="flex gap-3">
-                {SOCIAL_LINKS.map((social, index) => (
-                  <SocialLink key={index} {...social} />
-                ))}
-              </div>
             </div>
 
             {/* Links */}
@@ -534,11 +529,11 @@ export default function CongressoOdontologia() {
               <div className="space-y-3 text-sm">
                 <div className="flex items-center gap-3">
                   <Mail className="h-4 w-4 text-cyan-400 flex-shrink-0" />
-                  <span className="text-gray-400">contato@cod2024.com.br</span>
+                  <span className="text-gray-400">tiagocadide@yahoo.com.br</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="h-4 w-4 text-cyan-400 flex-shrink-0" />
-                  <span className="text-gray-400">(71) 3333-4444</span>
+                  <span className="text-gray-400">+55 (71) 8133-5749</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <MapPin className="h-4 w-4 text-cyan-400 flex-shrink-0 mt-0.5" />
