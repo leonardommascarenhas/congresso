@@ -336,13 +336,17 @@ export default function CongressoOdontologia() {
                 <span>8h às 18h</span>
               </div>
             </div>
-
-            <Button
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100 text-sm sm:text-base xl:text-lg 2xl:text-xl px-6 sm:px-8 py-3 sm:py-4 h-auto font-semibold shadow-xl">
-              Garanta sua vaga
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <a
+              href="https://outgo.com.br/congresso-de-odontologia-digital"
+              target="_blank"
+              rel="noopener noreferrer">
+              <Button
+                size="lg"
+                className="bg-white text-blue-600 hover:bg-gray-100 text-sm sm:text-base xl:text-lg 2xl:text-xl px-6 sm:px-8 py-3 sm:py-4 h-auto font-semibold shadow-xl">
+                Garanta sua vaga
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -472,12 +476,17 @@ export default function CongressoOdontologia() {
               ))}
             </div>
 
-            <Button
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100 text-xl px-12 py-6 h-auto font-bold shadow-xl">
-              Compre seu ingresso
-              <ArrowRight className="ml-2 h-6 w-6" />
-            </Button>
+            <a
+              href="https://outgo.com.br/congresso-de-odontologia-digital"
+              target="_blank"
+              rel="noopener noreferrer">
+              <Button
+                size="lg"
+                className="bg-white text-blue-600 hover:bg-gray-100 text-xl px-12 py-6 h-auto font-bold shadow-xl">
+                Compre seu ingresso
+                <ArrowRight className="ml-2 h-6 w-6" />
+              </Button>
+            </a>
 
             <p className="mt-4 text-white/80">Parcelamento em até 12x sem juros</p>
           </div>
