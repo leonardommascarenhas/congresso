@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, ReactNode } from "react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,7 +9,7 @@ type Speaker = {
   id: number;
   nome: string;
   especialidade: string;
-  bio: string;
+  bio: string | ReactNode;
   imagem: string;
   credenciais: string;
   alias: string;

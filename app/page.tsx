@@ -20,12 +20,13 @@ import SpeakerCard from "@/components/SpeakerCard";
 import ScheduleButton from "@/components/ScheduleButton";
 import SimpleStatsSection from "@/components/Stats";
 import EventSection from "./Header";
+import { ReactNode } from "react";
 
 type Speaker = {
   id: number;
   nome: string;
   especialidade: string;
-  bio: string;
+  bio: string | ReactNode;
   imagem: string;
   credenciais: string;
   alias: string;
@@ -62,17 +63,30 @@ const SPEAKERS_DATA: Speaker[] = [
   {
     id: 3,
     nome: "Dr. Fábio Barbosa",
-    especialidade: "Cirurgias Avançadas e Estética Periodontal",
-    bio: "Mestre em Implantes Dentários pela São Leopoldo Mandic. Pós-graduado em Cirurgias Avançadas pelo M.A.R.C Miami. CEO do Instituto Odontomédico e proprietário da Zircolab.",
+    especialidade: "Cirurgia Avançada e Fluxo Digital",
+    bio: (
+      <>
+        Mestre em Implantes Dentários pela São Leopoldo Mandic. <br />
+        Pós-graduado em Cirurgias Avançadas pelo M.A.R.C Miami. <br />
+        CEO do Instituto Odontomédico e proprietário da Zircolab.
+      </>
+    ),
     imagem: "/Doutores/Fabio.webp",
-    credenciais: "UFBA • São Leopoldo Mandic • M.A.R.C Miami",
+    credenciais: "Mestre em Implantes • 25 anos de experiência",
     alias: "FB",
   },
   {
     id: 1,
     nome: "Prof. Tiago Cadidé",
     especialidade: "Implantodontia e Harmonização Facial",
-    bio: "Especialista em Implantodontia, Prótese Dentária e Harmonização Facial, Mestre e Doutorando em Implantodontia. Coordenador dos cursos de Especialização do Instituto Harmonic nas unidades de Aracaju, Salvador e Feira de Santana.",
+    bio: (
+      <>
+        Especialista em Implantodontia, Prótese Dentária e Harmonização Facial, <br />
+        Mestre e Doutorando em Implantodontia. <br />
+        Coordenador dos cursos de Especialização do Instituto Harmonic nas unidades de
+        Aracaju, Salvador e Feira de Santana.
+      </>
+    ),
     imagem: "/Doutores/DrTiagoCadidé.jpg",
     credenciais: "Mestre • Doutorando • 18 anos de experiência",
     alias: "TC",
@@ -81,37 +95,49 @@ const SPEAKERS_DATA: Speaker[] = [
     id: 2,
     nome: "Dra. Daniela Barbosa",
     especialidade: "Implantodontia e Prótese Dentária",
-    bio: "Formada pela Escola Bahiana de Medicina e Saúde Pública. Especialista em Implantodontia e Prótese Dentária pela CTA Academy São Paulo. Também é especialista em Cirurgia Bucal pelo Instituto Prime.",
+    bio: (
+      <>
+        Formada pela Escola Bahiana de Medicina e Saúde Pública. <br />
+        Especialista em Implantodontia e Prótese Dentária pela CTA Academy São Paulo.{" "}
+        <br />
+        Também é especialista em Cirurgia Bucal pelo Instituto Prime.
+      </>
+    ),
     imagem: "/Doutores/DanielaBarbosa.jpeg",
     credenciais: "CTA Academy • Instituto Prime",
     alias: "DB",
   },
-
   {
     id: 4,
     nome: "Dr. Lucas Cunha",
     especialidade: "Prótese Dentária e Laminados Cerâmicos",
-    bio: "Graduado em Odontologia pela UNESP – São José dos Campos (SP).\nAtualização em Implantodontia pela USP – São Paulo.\nEspecialista em Implantodontia pela UNESP – São José dos Campos.\nMestre em Periodontia pela São Leopoldo Mandic – Campinas (SP).",
+    bio: (
+      <>
+        Graduado em Odontologia pela UNESP – São José dos Campos (SP). <br />
+        Atualização em Implantodontia pela USP – São Paulo. <br />
+        Especialista em Implantodontia pela UNESP – São José dos Campos. <br />
+        Mestre em Periodontia pela São Leopoldo Mandic – Campinas (SP).
+      </>
+    ),
     imagem: "/Doutores/LucasCunha.jpeg",
     credenciais: "Mestre em Prótese • Estética Digital",
     alias: "LB",
   },
-  // {
-  //   id: 5,
-  //   nome: "Dr. Leonardo Barreto",
-  //   especialidade: "Tecnologias em Implantodontia",
-  //   bio: "Especialista, mestre e doutor em Implantodontia. Pesquisador em novas tecnologias aplicadas à implantodontia. Professor universitário.",
-  //   imagem: "/placeholder.svg?height=200&width=200&text=Dr.+Lucas+Cunha",
-  //   credenciais: "Mestre • Doutor • Professor",
-  //   alias: "LC",
-  // },
   {
     id: 6,
     nome: "Dra. Ana Julia Melo",
     especialidade: "Tecnologias em Implantodontia e Prótese Dentária",
-    bio: "Especialista, mestre e doutora em Implantodontia. Pesquisadora em novas tecnologias aplicadas à implantodontia. Professora universitária.\nGraduada em Odontologia pela Universidade Estadual do Norte do Paraná (UENP).\nEspecialista em Prótese Dentária pelo Instituto Ária – Brasília.\nEspecializada em Implantodontia pela Innovare – Salvador.\nAtualização em Lentes de Contato Dentais com Dr. Eduardo Rocha.",
+    bio: (
+      <>
+        Graduada em Odontologia pela Universidade Estadual do Norte do Paraná - UENP{" "}
+        <br />
+        Especialista em Prótese Dentária pelo Instituto Ária - Brasília <br />
+        Especializanda em Implantodontia pela Innovare - Salvador <br />
+        Pós-graduada em Lentes de Contato Dentais pelo Instituto Ária - Brasília
+      </>
+    ),
     imagem: "/Doutores/AnaJuliaMeloCropped.JPG",
-    credenciais: "Mestre • Doutora • Professora",
+    credenciais: "Especialista em Prótese • Implantodontia",
     alias: "AJ",
   },
 ];
@@ -165,7 +191,7 @@ const SCHEDULE_DATA: Record<"morning" | "afternoon", ScheduleItem[]> = {
       title: "Laminados Cerâmicos & Fluxo Digital",
       time: "15:00 - 16:00",
       description: "Estética dental com laminados cerâmicos digitais",
-      speakers: [4],
+      speakers: [6],
     },
     {
       type: "break",
@@ -177,7 +203,8 @@ const SCHEDULE_DATA: Record<"morning" | "afternoon", ScheduleItem[]> = {
       type: "presentation",
       title: "Tecnologias em Implantodontia",
       time: "17:00 - 18:00",
-      description: "Inovações e tendências futuras em implantodontia",
+      description: "Novas tecnologias e materiais das reabilitações com o fluxo digital",
+      speakers: [1, 4],
     },
     {
       type: "closing",
@@ -243,6 +270,7 @@ const SpeakerProfile = ({ speakerId }: { speakerId: number }) => {
           }
           alt={speaker.nome}
           fill
+          quality={100}
           className={`rounded-full object-cover transition-transform duration-300 ${
             speaker.id === 1 || speaker.id === 4 ? "object-top" : "hover:scale-110"
           }`}
