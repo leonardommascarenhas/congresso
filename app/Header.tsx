@@ -43,9 +43,13 @@ export default function EventSection() {
             {sectionContent.description}
           </p>
 
-          <button className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg text-base font-semibold shadow-md">
+          <a
+            href="https://outgo.com.br/congresso-de-odontologia-digital"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg text-base font-semibold shadow-md text-center">
             {sectionContent.buttonLabel}
-          </button>
+          </a>
         </div>
       </div>
     </div>

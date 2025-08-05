@@ -5,9 +5,10 @@ import "./globals.css";
 import { WhatsAppFloatingButton } from "./WhatsappButton";
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.dev",
+  title: "Congresso de Odontologia Digital • 6 de setembro • Salvador",
+  description:
+    "Participe do Congresso de Odontologia Digital em Salvador! Um dia de inovação, tecnologia e networking com os maiores nomes da área.",
+  generator: "Next.js",
 };
 
 export default function RootLayout({
